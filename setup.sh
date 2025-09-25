@@ -18,6 +18,7 @@ pkg install which
 pkg install perl
 pkg install ripgrep
 pkg install nmap
+pkg install file
 
 # Set up some Git's configurations
 git config set --global init.defaultBranch main
