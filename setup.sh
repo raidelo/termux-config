@@ -13,12 +13,15 @@ pkg install python
 pkg install nodejs
 pkg install wget
 pkg install git
+pkg install gh
 pkg install uv
 pkg install which
 pkg install perl
 pkg install ripgrep
 pkg install nmap
 pkg install file
+pkg install zip
+pkg install unzip
 
 # Set up some Git's configurations
 git config set --global init.defaultBranch main
