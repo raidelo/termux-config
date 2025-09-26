@@ -44,5 +44,14 @@ pip install colorama
 mkdir .config
 git clone https://github.com/raidelo/neovim-config.git ./.config/nvim
 
+# Download and setup of a NerdFont
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Cousine.zip
+mkdir Cousine
+chmod -R u=rwx Cousine
+unzip Cousine.zip -d Cousine
+mv Cousine/CousineNerdFontMono-Regular.ttf ~/.termux/font.ttf
+rm -rf Cousine
+termux-reload-settings
+
 # Authenticate GitHub account
 gh auth login
