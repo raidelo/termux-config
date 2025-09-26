@@ -54,5 +54,12 @@ rm -rf Cousine
 rm Cousine.zip
 termux-reload-settings
 
+# Set aliases for some commands
+echo \# Setting some aliases >> ~/.bashrc
+echo alias cls=clear >> ~/.bashrc
+echo alias ll=\"ls -la\" >> ~/.bashrc
+echo alias la=\"ls -a\" >> ~/.bashrc
+source ~/.bashrc
+
 # Authenticate GitHub account
 gh auth login
