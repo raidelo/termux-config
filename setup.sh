@@ -51,6 +51,7 @@ chmod -R u=rwx Cousine
 unzip Cousine.zip -d Cousine
 mv Cousine/CousineNerdFontMono-Regular.ttf ~/.termux/font.ttf
 rm -rf Cousine
+rm Cousine.zip
 termux-reload-settings
 
 # Authenticate GitHub account
