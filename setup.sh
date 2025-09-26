@@ -41,8 +41,8 @@ pip install rich
 pip install colorama
 
 # Download of Neovim's config
-mkdir .config
-git clone https://github.com/raidelo/neovim-config.git ./.config/nvim
+mkdir ~/.config
+git clone https://github.com/raidelo/neovim-config.git ~/.config/nvim
 
 # Download and setup of a NerdFont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Cousine.zip
