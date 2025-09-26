@@ -43,3 +43,5 @@ pip install colorama
 mkdir .config
 git clone https://github.com/raidelo/neovim-config.git ./.config/nvim
 
+# Authenticate GitHub account
+gh auth login
