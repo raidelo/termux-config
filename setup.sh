@@ -22,6 +22,7 @@ pkg install nmap
 pkg install file
 pkg install zip
 pkg install unzip
+pkg install termux-api
 
 # Set up some Git's configurations
 git config set --global init.defaultBranch main
