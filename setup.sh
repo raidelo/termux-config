@@ -25,7 +25,7 @@ git config set --global init.defaultBranch main
 git config set --global user.email raidelosix@gmail.com
 git config set --global user.name raidelo
 git config set --global alias.lodag "log --oneline --decorate --all --graph"
-git config set --global alias.ll logdag
+git config set --global alias.ll lodag
 git config set --global alias.co checkout
 git config set --global alias.ss status
 git config set --global core.editor nvim
