@@ -4,25 +4,24 @@
 termux-setup-storage
 
 # Install some useful pakages
-pkg update
-pkg upgrade
-pkg install man
-pkg install neovim
-pkg install vim
-pkg install python
-pkg install nodejs
-pkg install wget
-pkg install git
-pkg install gh
-pkg install uv
-pkg install which
-pkg install perl
-pkg install ripgrep
-pkg install nmap
-pkg install file
-pkg install zip
-pkg install unzip
-pkg install termux-api
+pkg update && pkg upgrade && pkg install -y \
+  man \
+  neovim \
+  vim \
+  python \
+  nodejs \
+  wget \
+  git \
+  gh \
+  uv \
+  which \
+  perl \
+  ripgrep \
+  nmap \
+  file \
+  zip \
+  unzip \
+  termux-api
 
 # Set up some Git's configurations
 git config set --global init.defaultBranch main
@@ -35,16 +34,13 @@ git config set --global alias.ss status
 git config set --global core.editor nvim
 
 # Install some Python's useful libraries
-pip install requests
-pip install bs4
-pip install rich
-pip install colorama
+pip install requests bs4 rich colorama
 
 # Download of Neovim's config
-mkdir ~/.config
+mkdir -p ~/.config
 git clone https://github.com/raidelo/neovim-config.git ~/.config/nvim
 
-# Download and setup of a NerdFont
+# Download and set a NerdFont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Cousine.zip
 mkdir Cousine
 chmod -R u=rwx Cousine
@@ -55,10 +51,11 @@ rm Cousine.zip
 termux-reload-settings
 
 # Set aliases for some commands
-echo \# Setting some aliases >> ~/.bashrc
-echo alias cls=clear >> ~/.bashrc
-echo alias ll=\"ls -la\" >> ~/.bashrc
-echo alias la=\"ls -a\" >> ~/.bashrc
+t = "# Setting some aliases\n"
+t += "alias cls=clear\n"
+t += "alias ll=\"ls -la\"\n"
+t += "alias la=\"ls -a\"\n"
+echo t >>~/.bashrc
 source ~/.bashrc
 
 # Authenticate GitHub account
