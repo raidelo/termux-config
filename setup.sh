@@ -21,6 +21,10 @@ pkg update && pkg upgrade && pkg install -y \
   file \
   zip \
   unzip \
+  tree \
+  fd \
+  fzf \
+  lazygit \
   termux-api
 
 # Set up some Git's configurations
