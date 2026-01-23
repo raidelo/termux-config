@@ -41,13 +41,9 @@ mkdir -p ~/.config
 git clone https://github.com/raidelo/neovim-config.git ~/.config/nvim
 
 # Download and set a NerdFont
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Cousine.zip
-mkdir Cousine
-chmod -R u=rwx Cousine
-unzip Cousine.zip -d Cousine
-mv Cousine/CousineNerdFontMono-Regular.ttf ~/.termux/font.ttf
-rm -rf Cousine
-rm Cousine.zip
+URL = "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts"
+FONT = "/JetBrainsMono/NoLigatures/Regular/JetBrainsMonoNLNerdFontMono-Regular.ttf"
+wget -q --show-progress -P ~/.termux/ -O font.ttf ${URL}${FONT}
 termux-reload-settings
 
 # Set aliases for some commands
