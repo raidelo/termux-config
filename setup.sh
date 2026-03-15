@@ -87,6 +87,9 @@ termux-reload-settings
 # --------------------------------------------------
 BASHRC_BLOCK=$(
   cat <<'EOF'
+
+# >>> raidelo setup >>>
+
 # --------------------------------------------------
 # Shell aliases
 # Shortcuts for common terminal commands
@@ -117,11 +120,17 @@ GH_REPO="git@github.com:raidelo"
 export EDITOR=nvim
 export VISUAL=nvim
 
+# <<< raidelo setup <<<
+
 EOF
 )
 
-# Add block only if it doesn't already exist
-grep -q "GH_REPO=\"git@github.com:raidelo\"" ~/.bashrc || echo "$BASHRC_BLOCK" >>~/.bashrc
+# Ensure .bashrc exists
+touch ~/.bashrc
+
+# Replace existing setup block and append fresh one
+sed -i '/# >>> raidelo setup >>>/,/# <<< raidelo setup <<</d' ~/.bashrc
+echo "$BASHRC_BLOCK" >>~/.bashrc
 
 source ~/.bashrc
 
