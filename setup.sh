@@ -1,15 +1,26 @@
 #!/usr/bin/env bash
 
+TOTAL_STEPS=8
+STEP=1
+
+step() {
+  echo
+  echo "==> [$STEP/$TOTAL_STEPS] $1"
+  STEP=$((STEP + 1))
+}
+
 set -e
 
 # --------------------------------------------------
 # Grant storage access permissions to Termux
 # --------------------------------------------------
+step "Granting storage permissions"
 termux-setup-storage
 
 # --------------------------------------------------
 # Install useful packages
 # --------------------------------------------------
+step "Installing packages"
 pkg update -y
 pkg upgrade -y
 
@@ -40,6 +51,7 @@ pkg install -y \
 # Git global configuration
 # Default branch, user identity and useful aliases
 # --------------------------------------------------
+step "Configuring Git"
 git config --global init.defaultBranch main
 git config --global user.email "raidelosix@gmail.com"
 git config --global user.name "raidelo"
@@ -55,6 +67,7 @@ git config --global core.editor nvim
 # Python utilities
 # Install commonly used libraries
 # --------------------------------------------------
+step "Installing Python utilities"
 python -m pip install --upgrade pip
 pip install requests bs4 rich colorama
 
@@ -62,6 +75,7 @@ pip install requests bs4 rich colorama
 # Neovim setup
 # Clone personal Neovim configuration
 # --------------------------------------------------
+step "Installing Neovim config"
 mkdir -p ~/.config
 
 if [ ! -d ~/.config/nvim ]; then
@@ -72,6 +86,7 @@ fi
 # Terminal font setup
 # Download and apply JetBrainsMono Nerd Font (Termux)
 # --------------------------------------------------
+step "Installing Nerd Font"
 URL="https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts"
 FONT="/JetBrainsMono/NoLigatures/Regular/JetBrainsMonoNLNerdFontMono-Regular.ttf"
 
@@ -85,6 +100,7 @@ termux-reload-settings
 # Bash configuration
 # Aliases and environment variables
 # --------------------------------------------------
+step "Updating bash configuration"
 BASHRC_BLOCK=$(
   cat <<'EOF'
 
@@ -137,4 +153,5 @@ source ~/.bashrc
 # --------------------------------------------------
 # Authenticate GitHub account
 # --------------------------------------------------
+step "Authenticating Github CLI"
 gh auth login
