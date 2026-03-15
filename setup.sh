@@ -114,6 +114,9 @@ alias cls=clear
 alias ll="ls -la"
 alias la="ls -a"
 
+alias rmr="rm -r"
+alias rmrf="rm -rf"
+
 
 # --------------------------------------------------
 # Neovim configuration management
