@@ -112,6 +112,11 @@ alias nvim-backup-delete="rm -rf ~/.config/nvim.bak ~/.local/share/nvim.bak ~/.l
 # --------------------------------------------------
 GH_REPO="git@github.com:raidelo"
 
+
+# Default editors
+export EDITOR=nvim
+export VISUAL=nvim
+
 EOF
 )
 
