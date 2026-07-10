@@ -68,7 +68,6 @@ git config --global core.editor nvim
 # Install commonly used libraries
 # --------------------------------------------------
 step "Installing Python utilities"
-python -m pip install --upgrade pip
 pip install requests bs4 rich colorama
 
 # --------------------------------------------------
