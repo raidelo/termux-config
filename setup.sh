@@ -117,6 +117,7 @@ alias la="ls -a"
 alias rmr="rm -r"
 alias rmrf="rm -rf"
 
+alias lgit="lazygit"
 
 # --------------------------------------------------
 # Neovim configuration management
