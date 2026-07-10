@@ -42,6 +42,7 @@ pkg install -y \
   zip \
   unzip \
   tree \
+  tmux \
   fd \
   fzf \
   lazygit \
