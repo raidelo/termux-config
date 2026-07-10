@@ -155,5 +155,8 @@ source ~/.bashrc
 # --------------------------------------------------
 # Authenticate GitHub account
 # --------------------------------------------------
-step "Authenticating Github CLI"
-gh auth login
+step "GitHub CLI authentication"
+echo "To authenticate with GitHub, manually run:"
+echo
+echo "    gh auth login"
+echo
