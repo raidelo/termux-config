@@ -46,6 +46,7 @@ pkg install -y \
   fd \
   fzf \
   lazygit \
+  eza \
   termux-api
 
 # --------------------------------------------------
@@ -118,6 +119,7 @@ alias rmr="rm -r"
 alias rmrf="rm -rf"
 
 alias lgit="lazygit"
+alias ls="eza"
 
 # --------------------------------------------------
 # Neovim configuration management
