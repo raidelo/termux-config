@@ -47,6 +47,7 @@ pkg install -y \
   fzf \
   lazygit \
   eza \
+  bat \
   termux-api
 
 # --------------------------------------------------
