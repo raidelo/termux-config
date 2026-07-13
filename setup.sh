@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TOTAL_STEPS=8
+TOTAL_STEPS=7
 STEP=1
 
 step() {
@@ -65,13 +65,6 @@ git config --global alias.co checkout
 git config --global alias.ss status
 
 git config --global core.editor nvim
-
-# --------------------------------------------------
-# Python utilities
-# Install commonly used libraries
-# --------------------------------------------------
-step "Installing Python utilities"
-pip install requests bs4 rich colorama
 
 # --------------------------------------------------
 # Neovim setup
