@@ -63,6 +63,7 @@ git config --global alias.lodag "log --oneline --decorate --all --graph"
 git config --global alias.ll lodag
 git config --global alias.co checkout
 git config --global alias.ss status
+git config --global alias.changelog '!f(){ git cliff "$@" -o CHANGELOG.md && npx prettier --write CHANGELOG.md; }; f'
 
 git config --global core.editor nvim
 
