@@ -107,8 +107,9 @@ BASHRC_BLOCK=$(
 # Shortcuts for common terminal commands
 # --------------------------------------------------
 alias cls=clear
-alias ll="ls -la"
+alias l="ls -l"
 alias la="ls -a"
+alias ll="ls -la"
 
 alias rmr="rm -r"
 alias rmrf="rm -rf"
