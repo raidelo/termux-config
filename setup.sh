@@ -49,6 +49,7 @@ pkg install -y \
   eza \
   bat \
   zoxide \
+  yazi \
   termux-api
 
 # --------------------------------------------------
