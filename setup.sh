@@ -36,18 +36,19 @@ pkg install -y \
   uv \
   which \
   perl \
-  ripgrep \
   nmap \
   file \
   zip \
   unzip \
   tree \
   tmux \
+  ripgrep \
   fd \
   fzf \
   lazygit \
   eza \
   bat \
+  zoxide \
   termux-api
 
 # --------------------------------------------------
