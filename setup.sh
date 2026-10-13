@@ -139,6 +139,11 @@ GH_REPO="git@github.com:raidelo"
 export EDITOR=nvim
 export VISUAL=nvim
 
+# --------------------------------------------------
+# Zoxide configuration
+# --------------------------------------------------
+eval "$(zoxide init bash)"
+
 # <<< raidelo setup <<<
 
 EOF
