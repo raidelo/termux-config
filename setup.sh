@@ -118,6 +118,7 @@ alias rmrf="rm -rf"
 
 alias lgit="lazygit"
 alias ls="eza --icons=always"
+alias cd="z"
 
 # --------------------------------------------------
 # Neovim configuration management
