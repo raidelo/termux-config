@@ -117,6 +117,7 @@ alias rmr="rm -r"
 alias rmrf="rm -rf"
 
 alias lgit="lazygit"
+alias lg="lazygit"
 alias ls="eza --icons=always"
 alias cd="z"
 
